@@ -1,0 +1,47 @@
+$emSize: 1em;
+
+$fontFamily:'Fira Sans Condensed',sans-serif;
+$fontSize: 18px;
+$fontSizeH1: 36px;
+
+$unit: $emSize / 14;
+
+
+$colorText: #000;
+$cPurple: #ab2c80;
+$cGreen:#00dcb0;
+$cOrange:#ffb400;
+$cdGreen:#63af20;
+$cBlue:#00baff;
+$cdBlue: #007dde;
+$clPurple:#e80068;
+$cRed:#e40036;
+
+$cText:#184a5e;
+
+
+@mixin HVcenter($w, $h) {
+	display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: $w;
+    max-height: $h;
+    margin: auto;
+}
+
+@mixin placeholder() {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}
+	&:focus{
+		&::-webkit-input-placeholder {@content}
+		&:-moz-placeholder           {@content}
+		&::-moz-placeholder          {@content}
+		&:-ms-input-placeholder      {@content}
+	}
+}
+

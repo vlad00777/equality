@@ -1,0 +1,25 @@
+extends ../Templates/Base
+
+block Declaration
+    -fileAlias = 'idea'
+    -mainMenuPath = ['IDEA']
+
+block wMenu
+
+block wContainer
+    #fullpage
+        .ideaBlock.section
+            .ideaBlock_size
+                h1.ideaBlock_title.tlt Idea
+                .ideaBlock_justify
+                    .ideaBlock_icon.ideaBlock_icon--device
+                    .ideaBlock_text
+                        p We współczesnym świecie coraz więcej aspektów życia uzależnionych jest od informatyki. Kontrola procesów wytwórczych, obsługa zamówień i logistyki, ewidencja sprzedaży, obsługa kadr, transfery finansowe, księgowość, analiza danych, zarządzanie projektam... Bez systemów komputerowych trudno wyobrazić sobie funkcjonowanie zarówno małej firmy, jak i korporacji. Niewielkiego urzędu gminy i ministerstwa. Powiatowego szpitala i polikliniki. Komunikacji miejskiej i międzynarodowego lotniska. Jesteśmy uzależnieni od prawidłowego funkcjonowania wielu powiązanych ze sobą systemów. Awaria każdego z nich niesie straty. Od błahych po trudne do wyobrażenia. Od korków na ulicach po długotrwałe przerwy w dostawie energii czy wody. Od chwilowego braku możliwości załatwienia sprawy w urzędzie po katastrofy ekologiczne. Od utraty prywatnych zdjęć z wakacji po globalny konflikt zbrojny.
+                        blockquote Dlatego tak wielkiej wartości nabiera dziś jakość tworzonych systemów informatycznych oraz ich bezpieczeństwo. #[br]Od tego zależy codzienne życie zwykłych ludzi oraz funkcjonowanie pojedynczych firm i organizacji. #[br] Od tego zależy działanie państw i gospodarek!
+                        .ideaBlock_buttons
+                            a(href="program.html").buttons
+                                .buttons_icon.buttons_icon--orange.buttons_icon--verify
+                                .buttons_text program
+                            a(href="registration.html").buttons
+                                .buttons_icon.buttons_icon--green.buttons_icon--registration
+                                .buttons_text rejestracja

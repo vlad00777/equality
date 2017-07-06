@@ -1,0 +1,68 @@
+﻿//- ++++++++++++++++++++++++++++++++++++++++
+	
+	Mixins/Titles.jade
+	Заголовки-хедеры
+
+	Wezom wTPL v4.0.0
+
+//- ++++++++++++++++++++++++++++++++++++++++
+
+//- Set title
+mixin titleText(custom, text, link)
+	-var content = text
+	if typeof custom == 'string'
+		-content = custom
+	if link
+		a&attributes(link)
+			= content
+	else
+		= content
+
+//- Page Title
+mixin pageTitle(custom)
+	-var text = fileName
+	.pageTitle
+		+titleText(custom, text)
+
+mixin pageMiddleTitle(custom)
+	-var text = fileName
+	.pageMiddleTitle
+		+titleText(custom, text)
+
+mixin pageSmallTitle(custom)
+	-var text = fileName
+	.pageSmallTitle
+		+titleText(custom, text)
+	
+
+//-Header Title
+mixin h1(custom, link)
+	-var text = 'Заголовок h1'
+	h1
+		+titleText(custom, text, link)
+
+mixin h2(custom, link)
+	-var text = 'Заголовок h2'
+	h2
+		+titleText(custom, text, link)
+
+mixin h3(custom, link)
+	-var text = 'Заголовок h3'
+	h3
+		+titleText(custom, text, link)
+
+mixin h4(custom, link)
+	-var text = 'Заголовок h4'
+	h4
+		+titleText(custom, text, link)
+
+mixin h5(custom, link)
+	-var text = 'Заголовок h5'
+	h5
+		+titleText(custom, text, link)
+
+mixin h6(custom, link)
+	-var text = 'Заголовок h6'
+	h6
+		+titleText(custom, text, link)
+	

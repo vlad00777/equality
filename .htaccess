@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^partner=([0-9]+)$
+RewriteRule /partner.php /partner/%1? [L,R=301]

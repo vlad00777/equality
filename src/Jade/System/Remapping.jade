@@ -1,0 +1,29 @@
+﻿//- ++++++++++++++++++++++++++++++++++++++++
+	
+	System/Remapping.jade
+	Объявление системных переменых,
+	определение зависимостей на основе файла
+	
+	Wezom wTPL v4.0.0
+
+//- ++++++++++++++++++++++++++++++++++++++++
+
+//- Определяем данные файла из locals
+if LOCALS.files[fileAlias]
+	-fileData = LOCALS.files[fileAlias]
+
+//- Имя файла
+if fileData.name
+	-fileName = fileData.name
+
+//- Тайтл файла
+if fileData.title
+	-fileTitle = fileData.title
+
+//- Ссылка файла
+if fileData.link
+	-fileLink = fileData.link
+
+//- Класс для боди, если обявлен
+if fileData.bodyClass
+	-bodyAttr['class'] = fileData.bodyClass

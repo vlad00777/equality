@@ -1,0 +1,65 @@
+﻿//- ++++++++++++++++++++++++++++++++++++++++
+	
+	Mixins/Forms.jade
+	элементы форм
+
+	Wezom wTPL v4.0.0
+
+//- ++++++++++++++++++++++++++++++++++++++++
+
+//- textForm
+mixin textForm(tagName, iReq, iAttrs, iRulers, iMsgs, iContent)
+	-var attrs = {}
+	if tagName == 'input'
+		-attrs.type = 'text'
+		-attrs.class = 'wInput'
+	if tagName == 'textarea'
+		-attrs.class = 'wTextarea'
+	if typeof(iAttrs) == 'object'
+		each val, key in iAttrs
+			-attrs[key] = val
+	if iReq
+		-attrs.required = true
+	if typeof(iRulers) == 'object'
+		each val, key in iRulers
+			if typeof(val) == 'object'
+				-attrs['data-rule-'+key] = val[0]
+				-attrs['data-msg-'+key] = val[1]
+			else
+				-attrs['data-rule-'+key] = val
+	if typeof(iMsgs) == 'object'
+		each val, key in iMsgs
+			-attrs['data-msg-'+key] = val
+	if tagName == 'textarea'
+		if iContent
+			textarea&attributes(attrs)= iContent
+		else
+			textarea&attributes(attrs)
+	else if tagName == 'input'
+		input&attributes(attrs)
+
+//- inputText
+mixin inputText(iReq, iAttrs, iRulers, iMsgs)
+	+textForm('input', iReq, iAttrs, iRulers, iMsgs)
+
+//- textArea
+mixin textArea(iReq, iAttrs, iRulers, iMsgs, iContent)
+	+textForm('textarea', iReq, iAttrs, iRulers, iMsgs, iContent)
+
+//- buttonForm
+mixin buttonForm(text, attrs)
+	button&attributes(attrs)= text
+
+//- buttonSubmit
+mixin buttonSubmit(textBtn)
+	-var text = textBtn || 'Подтверждение'
+	-var attrs = {'type': 'submit'}
+	-attrs.class = 'wSubmit wBtn w_success'
+	+buttonForm(text, attrs)
+
+//- buttonReset
+mixin buttonReset(textBtn)
+	-var text = textBtn || 'Сброс'
+	-var attrs = {'type': 'reset'}
+	-attrs.class = 'wReset wBtn w_danger'
+	+buttonForm(text, attrs)

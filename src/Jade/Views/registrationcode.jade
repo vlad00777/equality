@@ -1,0 +1,88 @@
+extends ../Templates/Base
+
+block Declaration
+    -fileAlias = 'index'
+    -bodyAttr.class = 'indexPage'
+    -seoSet = true
+    -mainMenuPath = ['Main']
+
+block wMenu
+
+block wContainer
+    #fullpage
+        .regFormBlock.section
+            .regFormBlock_size
+                .regFormBlock_title
+                    span Rejestracja
+                    .regFormBlock_title-right
+                        .regFormBlock_status
+                            span Twój status:
+                            .regFormBlock_status-icon
+                            span VIP
+                        .regFormBlock_question.js-infoWindow
+                            .regFormBlock_question-icon
+                            .regFormBlock_question-popup
+                                ul.regFormBlock_question-list
+                                    li bezpłatyny udział w forum
+                                    li bezpłatny udział w bankiecie
+                        .regFormBlock_steps
+                            span Etap zamówienia:
+                            .regFormBlock_step.is-active 01
+                            .regFormBlock_step 02
+                            .regFormBlock_step 03
+                form.regFormBlock_form(action="", method="post")
+                    .regFormBlock_forms
+                        .regFormBlock_formBlock.js-animate
+                            .regFormBlock_formBlock-title Uzupełnij poniższe pola:
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label Imię i nazwisko:
+                                input(type="text",name="name",required)
+                            .regFormBlock_formBlock-row
+                                label Stanowisko:
+                                input(type="text",name="stan")
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label Nazwa firmy:
+                                input(type="text",name="firm",required)
+                            .regFormBlock_formBlock-row
+                                label Ulica:
+                                input(type="text",name="street")
+                            .regFormBlock_formBlock-row2
+                                .regFormBlock_formBlock-rowc2
+                                    label Kod pocztowy:
+                                    input(type="tel",name="code")
+                                .regFormBlock_formBlock-rowc2
+                                    label Miasto:
+                                    input(type="text",name="city")
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label Telefon:
+                                input(type="tel",name="tel",required)
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label E-mail:
+                                input(type="email",name="email",required)
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label Powtórz E-mail:
+                                input(type="email",name="cemail",required)
+                        .regFormBlock_code.js-animate
+                            .regFormBlock_code-block
+                                .regFormBlock_code-title Wpisz kod
+                                .regFormBlock_code-input
+                                    input(type="text",name="code",required)
+                                    //span ok
+
+                        .regFormBlock_info
+                            .regFormBlock_inputs
+                                .regFormBlock_input.regFormBlock_input--required
+                                    label
+                                        input(type="checkbox",name="acc",required)
+                                        span Akceptuję warunki świadczenia usługi, klauzulę dot. przetwarzania danych osobowych dla celów realizacji usługi.
+                                .regFormBlock_input
+                                    label
+                                        input(type="checkbox",name="acc2")
+                                        span Akceptuję klauzulę dot. przetwarzania danych osobowych dla celów marketingowych.
+                            .regFormBlock_footer
+                                .regFormBlock_buttons
+                                    .buttons.buttons--big
+                                        input(type="submit")
+                                        .buttons_icon.buttons_icon--orange.buttons_icon--clipboard
+                                        .buttons_text podsumowanie
+                                .regFormBlock_desc Pola oznaczone gwiazdką są obowiązkowe

@@ -1,0 +1,31 @@
+﻿//- ++++++++++++++++++++++++++++++++++++++++
+	
+	Templates/ErrorPage.jade
+	Базовый шаблон для основных типовых страниц
+
+	Wezom wTPL v4.0.0
+
+//- ++++++++++++++++++++++++++++++++++++++++
+
+//- Конфигурация
+include ../System/Config
+
+//- Вспомогательные миксины
+include ../System/Mixins
+
+//- Разметка
+doctype html
+html.no-js(lang=fileLanguage dir="ltr")
+	head
+		include ../Widgets/Head
+
+	-var error = 'error'
+	-bodyAttr.class = error + 'Page'
+
+	body&attributes(bodyAttr)
+
+		div(class=error + 'Wrapper')
+			block ErrorContent
+
+		//- Системный подвал
+		include ../Widgets/PageBottom

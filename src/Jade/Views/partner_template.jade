@@ -1,0 +1,39 @@
+extends ../Templates/Base
+
+block Declaration
+    -fileAlias = 'partners'
+    -mainMenuPath = ['PARTNERZY']
+
+block wMenu
+
+block wContainer
+    #fullpage
+        .ideaBlock.ideaBlock--bgPartner.section
+            .ideaBlock_size.ideaBlock_size--sidebar
+                .partnerInner
+                    .partnerInner_left
+                        h2.partnerInner_title Partner
+                        h1.ideaBlock_title.ideaBlock_title--withLink #{name}
+                            a(href="partners.html").partnerInner_link lista partnerów
+                        .ideaBlock_justify
+                            .ideaBlock_icon.ideaBlock_icon--hand
+                            .ideaBlock_text
+                                !{text}
+                    .partnerInner_right
+                        .partnerInner_sidebar
+                            - if(www == '') {
+                            .partnerInner_logo
+                                img(src="images/partners/big/#{logo}")
+                            - }
+                            - if(www != '') {
+                            a.partnerInner_logo(href="#{www}",target="_blank",rel="nofollow")
+                                img(src="images/partners/big/#{logo}")
+                            - }
+    - if(prev != '') {
+        a(href="partner_#{prev}.html").partnersNav.partnersNav--left
+            span poprzedni
+    - }
+    - if(next != '') {
+        a(href="partner_#{next}.html").partnersNav.partnersNav--right
+            span następny
+    - }

@@ -1,0 +1,108 @@
+﻿-
+    var LOCALS = locals;
+
+    LOCALS.rootfile = 'index';
+
+    LOCALS.files = {
+        index: {
+            title: 'e-Quality Forum Warsaw 2017 (5-6 październik 2017)'
+        },
+        contact:{
+            title:'e-Quality Forum Warsaw 2017 (5-6 październik 2017)'
+        },
+        idea:{
+            title:'e-Quality Forum Warsaw 2017 (5-6 październik 2017)'
+        },
+        place:{
+            title:'e-Quality Forum Warsaw 2017 (5-6 październik 2017)'
+        },
+        partners:{
+            title:'e-Quality Forum Warsaw 2017 (5-6 październik 2017)'
+        },
+        program:{
+            title:'e-Quality Forum Warsaw 2017 (5-6 październik 2017)'
+        },
+        registration:{
+            title:'e-Quality Forum Warsaw 2017 (5-6 październik 2017)',
+            clas:'is-active'
+        }
+    };
+
+    LOCALS.mainMenu = [
+        {
+            name: 'HOME',
+            alias: 'index'
+        },
+        {
+            name:'IDEA',
+            alias:'idea'
+        },
+        {
+            name:'PROGRAM',
+            alias:'program'
+        },
+        {
+            name:'PARTNERZY',
+            alias:'partners'
+        },
+        {
+            name:'MIEJSCE',
+            alias:'place'
+        },
+        {
+            name:'KONTAKT',
+            alias:'contact'
+        },
+        {
+            name:'REJESTRACJA',
+            alias:'registration'
+        }
+
+    ];
+
+    LOCALS.mobMenu = [
+    {
+    name: 'HOME',
+    alias: 'index'
+    },
+    {
+    name:'IDEA',
+    alias:'idea'
+    },
+    {
+    name:'PROGRAM',
+    alias:'program'
+    },
+    {
+    name:'PARTNERZY',
+    alias:'partners'
+    },
+    {
+    name:'MIEJSCE',
+    alias:'place'
+    },
+    {
+    name:'KONTAKT',
+    alias:'contact'
+    }
+    ];
+
+    LOCALS.sitemap = LOCALS.mainMenu.concat([
+    {}]);
+
+    function filesName() {
+        var root = LOCALS.rootfile;
+        for (var key in LOCALS.files) {
+            var branch = LOCALS.files[key];
+            branch.alias = key;
+            branch.link = key + '.html';
+            if (typeof branch.name === 'undefined') {
+                branch.name = branch.title;
+            }
+            if (typeof branch.breadcrumbs === 'undefined') {
+                branch.breadcrumbs = branch.title;
+            }
+        }
+    }
+
+    filesName();

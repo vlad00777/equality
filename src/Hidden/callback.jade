@@ -1,0 +1,22 @@
+﻿.mfiModal.zoomAnim
+	.pageTitle.w_small Заказать звонок
+	.wForm.wFormDef.wFormPreloader(data-form="true", data-ajax="wForm-demo-submit.php")
+		.wFormRow
+			-elementName = 'demo_callback'
+			-elementLabel = 'Phone ua *'
+			-
+				var attrs = {
+					required: true,
+					type: 'tel',
+					name: elementName,
+					id: elementName,
+					placeholder: 'Телефон укр. формата',
+					'data-rule-phoneUA': 'true'
+				}
+			.wFormInput
+				input.wInput&attributes(attrs)
+				.inpInfo(for=elementName)= elementLabel
+
+		.wFormRow.w_last
+			button.wSubmit.wBtn.w_success Подтверждение
+			button.wReset.wBtn.w_danger Сброс

@@ -1,0 +1,102 @@
+extends ../Templates/Base
+
+block Declaration
+    -fileAlias = 'index'
+    -bodyAttr.class = 'indexPage'
+    -seoSet = true
+    -mainMenuPath = ['Main']
+
+block wMenu
+
+block wContainer
+    #fullpage
+        .regFormBlock.section
+            .regFormBlock_size
+                .regFormBlock_title
+                    span.tlt Podsumowanie
+                    .regFormBlock_steps
+                        span Etap zamówienia:
+                        .regFormBlock_step 01
+                        .regFormBlock_step 02
+                        .regFormBlock_step.is-active 03
+                form.regFormBlock_form(action="", method="post")
+                    .regFormBlock_forms.regFormBlock_forms--margin
+                        .regFormBlock_summary.js-animate
+                            .regFormBlock_summary-top
+                                .regFormBlock_summary-text Zamówienie numer: 9032EQFW2017
+                                .regFormBlock_question.js-infoWindow
+                                    .regFormBlock_question-icon
+                                    .regFormBlock_question-popup
+                                        b ZAMÓWIENIE
+                                        ul.regFormBlock_question-list
+                                            li e-Quality Forum Warsaw 2017
+                            .regFormBlock_summary-title Twoje dane
+                            .regFormBlock_summary-row
+                                label Imię i nazwisko:
+                                span Dominik Misiak
+                            .regFormBlock_summary-row
+                                label Stanowisko:
+                                span Szef wszystkich szefów
+                            .regFormBlock_summary-row
+                                label Nazwa firmy:
+                                span Najlepsza CO
+                            .regFormBlock_summary-row
+                                label Ulica:
+                                span Nałęczowska 30/15
+                            .regFormBlock_summary-row
+                                label Kod pocztowy:
+                                span 20-701
+                            .regFormBlock_summary-row
+                                label Miasto:
+                                span Lublin
+                            .regFormBlock_summary-row
+                                label Telefon:
+                                span 81 534 21 31
+                            .regFormBlock_summary-row
+                                label E-mail:
+                                span biuro@ibif.pl
+
+                        .regFormBlock_summary.js-animate
+                            .regFormBlock_summary-title Dane do faktury VAT
+                            .regFormBlock_summary-row
+                                label Imię i nazwisko:
+                                span Dominik Misiak
+                            .regFormBlock_summary-row
+                                label Stanowisko:
+                                span Szef wszystkich szefów
+                            .regFormBlock_summary-row
+                                label Nazwa firmy:
+                                span Najlepsza CO
+                            .regFormBlock_summary-row
+                                label Ulica:
+                                span Nałęczowska 30/15
+                            .regFormBlock_summary-row
+                                label Kod pocztowy:
+                                span 20-701
+                            .regFormBlock_summary-row
+                                label Miasto:
+                                span Lublin
+                            .regFormBlock_summary-row
+                                label Telefon:
+                                span 81 534 21 31
+                            .regFormBlock_summary-row
+                                label E-mail:
+                                span biuro@ibif.pl
+                            .regFormBlock_summary-row
+                                label NIP:
+                                span 712-32-35-247
+                        .regFormBlock_info
+                            .regFormBlock_inputs
+                                .regFormBlock_input
+                                    label
+                                        input(type="checkbox",name="acc",checked,disabled)
+                                        span Akceptuję warunki świadczenia usługi, klauzulę dot. przetwarzania danych osobowych dla celów realizacji usługi.
+                                .regFormBlock_input.regFormBlock_input--required
+                                    label
+                                        input(type="checkbox",name="acc2",checked,disabled)
+                                        span Akceptuję klauzulę dot. przetwarzania danych osobowych dla celów marketingowych.
+                            .regFormBlock_footer
+                                .regFormBlock_buttons
+                                    a(href="javascript:window.print()").buttons
+                                        .buttons_icon.buttons_icon--red.buttons_icon--print
+                                        .buttons_text drukuj

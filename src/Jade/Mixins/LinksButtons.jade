@@ -1,0 +1,36 @@
+//- wBtn
+mixin wBtn(tagText, tagName, tagClasses, tagAttr, svgId)
+	-var tag = tagName || 'a'
+	-var classes = 'wBtn';
+	if typeof tagClasses == 'string'
+		-classes += ' '+tagClasses
+	-var attrs = tagAttr || {}
+	if tag === 'a' && (typeof tagAttr == 'undefined')
+		-attrs = {href: '#'}
+	if tag === 'input'
+		if typeof tagAttr == 'undefined'
+			-attrs = {type: 'button'}
+		input(class=classes, value=tagText)&attributes(attrs)
+	else
+		#{tag}(class=classes)&attributes(attrs)
+			if svgId
+				span.svgHolder
+					svg
+						use(xlink:href="#"+svgId)/
+			span
+				= tagText
+
+mixin wBtnSvg(svgId, tagText, tagName, tagClasses, tagAttr)
+	+wBtn(tagText, tagName, tagClasses, tagAttr, svgId)
+
+//- Пагинация
+mixin pagination()
+	.paginWrapp
+		a(href="#", class="pPrev wBtn") #{'<'}
+		a(href="#", class="wBtn") 2
+		a(href="#", class="wBtn w_primary") 3
+		a(href="#", class="wBtn") 4
+		span ...
+		a(href="#", class="wBtn") 12
+		a(href="#", class="wBtn") 13
+		a(href="#", class="pNext wBtn") #{'>'}

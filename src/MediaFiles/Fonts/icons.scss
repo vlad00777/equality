@@ -1,0 +1,399 @@
+@font-face {
+	font-family: "myfont";
+	src: url('../fonts/myfont.eot');
+	src: url('../fonts/myfont.eot?#iefix') format('eot'),
+		url('../fonts/myfont.woff2') format('woff2'),
+		url('../fonts/myfont.woff') format('woff'),
+		url('../fonts/myfont.ttf') format('truetype'),
+		url('../fonts/myfont.svg#myfont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "myfont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+	line-height:1;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == add-to-cart {
+		$char: "\E001";
+	}
+	@if $filename == arrow-pointing-to-right {
+		$char: "\E002";
+	}
+	@if $filename == back {
+		$char: "\E003";
+	}
+	@if $filename == bell-covering-hot-dish {
+		$char: "\E004";
+	}
+	@if $filename == boarding-ticket {
+		$char: "\E005";
+	}
+	@if $filename == broken-zone {
+		$char: "\E006";
+	}
+	@if $filename == bus {
+		$char: "\E007";
+	}
+	@if $filename == calendar {
+		$char: "\E008";
+	}
+	@if $filename == champagne {
+		$char: "\E009";
+	}
+	@if $filename == clipboard {
+		$char: "\E00A";
+	}
+	@if $filename == clipboard2 {
+		$char: "\E00B";
+	}
+	@if $filename == close {
+		$char: "\E00C";
+	}
+	@if $filename == closep {
+		$char: "\E00D";
+	}
+	@if $filename == conference {
+		$char: "\E00E";
+	}
+	@if $filename == cup {
+		$char: "\E00F";
+	}
+	@if $filename == devices {
+		$char: "\E010";
+	}
+	@if $filename == door-knob {
+		$char: "\E011";
+	}
+	@if $filename == envelope {
+		$char: "\E012";
+	}
+	@if $filename == envelope2 {
+		$char: "\E013";
+	}
+	@if $filename == facebook {
+		$char: "\E014";
+	}
+	@if $filename == group {
+		$char: "\E015";
+	}
+	@if $filename == handshake {
+		$char: "\E016";
+	}
+	@if $filename == idea {
+		$char: "\E017";
+	}
+	@if $filename == info {
+		$char: "\E018";
+	}
+	@if $filename == key {
+		$char: "\E019";
+	}
+	@if $filename == like {
+		$char: "\E01A";
+	}
+	@if $filename == link-symbol {
+		$char: "\E01B";
+	}
+	@if $filename == linkedin {
+		$char: "\E01C";
+	}
+	@if $filename == menu-button {
+		$char: "\E01D";
+	}
+	@if $filename == menu {
+		$char: "\E01E";
+	}
+	@if $filename == menu2 {
+		$char: "\E01F";
+	}
+	@if $filename == message-closed-envelope {
+		$char: "\E020";
+	}
+	@if $filename == microphone {
+		$char: "\E021";
+	}
+	@if $filename == molecule {
+		$char: "\E022";
+	}
+	@if $filename == next {
+		$char: "\E023";
+	}
+	@if $filename == open-book {
+		$char: "\E024";
+	}
+	@if $filename == parking {
+		$char: "\E025";
+	}
+	@if $filename == pdf-file-format-symbol {
+		$char: "\E026";
+	}
+	@if $filename == phone {
+		$char: "\E027";
+	}
+	@if $filename == piggy-bank {
+		$char: "\E028";
+	}
+	@if $filename == placeholder {
+		$char: "\E029";
+	}
+	@if $filename == placeholder2 {
+		$char: "\E02A";
+	}
+	@if $filename == placeholder3 {
+		$char: "\E02B";
+	}
+	@if $filename == plain-star {
+		$char: "\E02C";
+	}
+	@if $filename == printer {
+		$char: "\E02D";
+	}
+	@if $filename == question-mark {
+		$char: "\E02E";
+	}
+	@if $filename == right-arrow {
+		$char: "\E02F";
+	}
+	@if $filename == right-arrow2 {
+		$char: "\E030";
+	}
+	@if $filename == right-straight-arrow {
+		$char: "\E031";
+	}
+	@if $filename == round-done-button {
+		$char: "\E032";
+	}
+	@if $filename == settings {
+		$char: "\E033";
+	}
+	@if $filename == taxi-transportation {
+		$char: "\E034";
+	}
+	@if $filename == taxi {
+		$char: "\E035";
+	}
+	@if $filename == team {
+		$char: "\E036";
+	}
+	@if $filename == team1 {
+		$char: "\E037";
+	}
+	@if $filename == tick-sign {
+		$char: "\E038";
+	}
+	@if $filename == twitter {
+		$char: "\E039";
+	}
+	@if $filename == verified-text-paper {
+		$char: "\E03A";
+	}
+	@if $filename == world {
+		$char: "\E03B";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-add-to-cart {
+	@include icon(add-to-cart);
+}
+.icon-arrow-pointing-to-right {
+	@include icon(arrow-pointing-to-right);
+}
+.icon-back {
+	@include icon(back);
+}
+.icon-bell-covering-hot-dish {
+	@include icon(bell-covering-hot-dish);
+}
+.icon-boarding-ticket {
+	@include icon(boarding-ticket);
+}
+.icon-broken-zone {
+	@include icon(broken-zone);
+}
+.icon-bus {
+	@include icon(bus);
+}
+.icon-calendar {
+	@include icon(calendar);
+}
+.icon-champagne {
+	@include icon(champagne);
+}
+.icon-clipboard {
+	@include icon(clipboard);
+}
+.icon-clipboard2 {
+	@include icon(clipboard2);
+}
+.icon-close {
+	@include icon(close);
+}
+.icon-closep {
+	@include icon(closep);
+}
+.icon-conference {
+	@include icon(conference);
+}
+.icon-cup {
+	@include icon(cup);
+}
+.icon-devices {
+	@include icon(devices);
+}
+.icon-door-knob {
+	@include icon(door-knob);
+}
+.icon-envelope {
+	@include icon(envelope);
+}
+.icon-envelope2 {
+	@include icon(envelope2);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-group {
+	@include icon(group);
+}
+.icon-handshake {
+	@include icon(handshake);
+}
+.icon-idea {
+	@include icon(idea);
+}
+.icon-info {
+	@include icon(info);
+}
+.icon-key {
+	@include icon(key);
+}
+.icon-like {
+	@include icon(like);
+}
+.icon-link-symbol {
+	@include icon(link-symbol);
+}
+.icon-linkedin {
+	@include icon(linkedin);
+}
+.icon-menu-button {
+	@include icon(menu-button);
+}
+.icon-menu {
+	@include icon(menu);
+}
+.icon-menu2 {
+	@include icon(menu2);
+}
+.icon-message-closed-envelope {
+	@include icon(message-closed-envelope);
+}
+.icon-microphone {
+	@include icon(microphone);
+}
+.icon-molecule {
+	@include icon(molecule);
+}
+.icon-next {
+	@include icon(next);
+}
+.icon-open-book {
+	@include icon(open-book);
+}
+.icon-parking {
+	@include icon(parking);
+}
+.icon-pdf-file-format-symbol {
+	@include icon(pdf-file-format-symbol);
+}
+.icon-phone {
+	@include icon(phone);
+}
+.icon-piggy-bank {
+	@include icon(piggy-bank);
+}
+.icon-placeholder {
+	@include icon(placeholder);
+}
+.icon-placeholder2 {
+	@include icon(placeholder2);
+}
+.icon-placeholder3 {
+	@include icon(placeholder3);
+}
+.icon-plain-star {
+	@include icon(plain-star);
+}
+.icon-printer {
+	@include icon(printer);
+}
+.icon-question-mark {
+	@include icon(question-mark);
+}
+.icon-right-arrow {
+	@include icon(right-arrow);
+}
+.icon-right-arrow2 {
+	@include icon(right-arrow2);
+}
+.icon-right-straight-arrow {
+	@include icon(right-straight-arrow);
+}
+.icon-round-done-button {
+	@include icon(round-done-button);
+}
+.icon-settings {
+	@include icon(settings);
+}
+.icon-taxi-transportation {
+	@include icon(taxi-transportation);
+}
+.icon-taxi {
+	@include icon(taxi);
+}
+.icon-team {
+	@include icon(team);
+}
+.icon-team1 {
+	@include icon(team1);
+}
+.icon-tick-sign {
+	@include icon(tick-sign);
+}
+.icon-twitter {
+	@include icon(twitter);
+}
+.icon-verified-text-paper {
+	@include icon(verified-text-paper);
+}
+.icon-world {
+	@include icon(world);
+}

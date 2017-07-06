@@ -1,0 +1,136 @@
+extends ../Templates/Base
+
+block Declaration
+    -fileAlias = 'place'
+    -mainMenuPath = ['MIEJSCE']
+
+block wMenu
+
+block wContainer
+    #fullpage
+        .placeBlock.section.placeBlock--bg1
+            .placeBlock_size
+                .placeBlock_justify
+                    .placeBlock_icon
+                    .placeBlock_text
+                        .placeBlock_text-title Villa Foksal to odbudowana po wojnie kamienica, usytuowana w samym w centrum Warszawy przy jednej z najelegantszych stołecznych ulic.
+                        p Nie dociera tu jednak zgiełk i hałas metropolii. Budynek otacza bowiem piękny ogród z oranżerią. Tu spędzimy dwa dni na sesjach i panelach dyskusyjnych oraz prywatnych rozmowach kuluarowych.
+                        p Codziennie szef kuchni Villi Foksal podejmie naszych gości wykwintnym obiadem.
+                        .placeBlock_text-adress Adres: Villa Foksal, ul. Foksal 3/5, Warszawa
+                        .placeBlock_buttons
+                            .buttons.mfp(data-mfp-src="#mapa")
+                                .buttons_icon.buttons_icon--darkGreen.buttons_icon--place
+                                .buttons_text mapa
+                            .buttons.mfp(data-mfp-src="#road")
+                                .buttons_icon.buttons_icon--orange.buttons_icon--car
+                                .buttons_text dojazd
+
+                    .placeBlock_logo.js-animate
+                        img(src="images/foksal.png")
+
+        .placeBlock.section.placeBlock--bg2
+            .placeBlock_size
+                .placeBlock_justify
+                    .placeBlock_icon
+                    .placeBlock_text
+                        .placeBlock_text-title Belvedere w języku włoskim znaczy „piękny widok”. I taki właśnie podziwiać można z przeszklonych wnętrz restauracji Belvedere, która mieści się w zabytkowym budynku Nowej Oranżerii w sercu Łazienek Królewskich w Warszawie.
+                        p Tu spotkamy się na uroczystym, wieczornym bankiecie pierwszego dnia e-Quality Forum Warsaw 2017. Na tę okazje specjalne menu przygotował szef kuchni Adam Komar. Dla naszych gości przygotowaliśmy też open bar pełen najlepszych alkoholi.
+                        .placeBlock_text-adress Adres: Restauracja Belvedere, Łazienki Królewskie, #[br] ul Agrykola 1, Warszawa
+                        .placeBlock_buttons
+                            .buttons.mfp(data-mfp-src="#mapa2")
+                                .buttons_icon.buttons_icon--darkGreen.buttons_icon--place
+                                .buttons_text mapa
+                            .buttons.mfp(data-mfp-src="#road2")
+                                .buttons_icon.buttons_icon--orange.buttons_icon--car
+                                .buttons_text dojazd
+
+                    .placeBlock_logo.js-animate
+                        img(src="images/belvedere.png")
+
+    div(style="display:none")
+        #mapa.magnificPopupWrap
+            .magnificPopupWrap_buttons
+                .magnificPopupWrap_mapButton.is-active
+                .mfp.magnificPopupWrap_roadButton(data-mfp-src="#road")
+            .magnificPopupWrap_map
+                | <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19548.17628011965!2d21.01467527008761!3d52.23390100000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x176a2757f5a1a2db!2sVilla+Foksal!5e0!3m2!1sru!2spl!4v1493804335735" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        #road.magnificPopupWrap
+            .magnificPopupWrap_buttons
+                .magnificPopupWrap_mapButton.mfp(data-mfp-src="#mapa")
+                .magnificPopupWrap_roadButton.is-active
+            .magnificPopupWrap_road
+                .magnificPopupWrap_title
+                    span Dojazd Villa Foksal
+                    img(src="images/foksalblack.png")
+                .magnificPopupWrap_text
+                    .magnificPopupWrap_subtitle Rekomendowany dojazd z Lotniska Fryderyka Chopina
+                    .magnificPopupWrap_type.magnificPopupWrap_type--car
+                        .magnificPopupWrap_type-title Taksówka
+                        .magnificPopupWrap_type-text Dojazd taksówką z Lotniska Fryderyka Chopina zabiera ok. 25-30 minut, choć w godzinach szczytu komunikacyjnego może trwać dłużej. Koszt to ok. 40-50 zł. Władze lotniska rekomendują usługi trzech korporacji: Ele Taxi (tel. +48 22.811.11.11), Super Taxi (tel. +48 22.196.22) oraz Sawa Taxi (tel. +48 22 644.44.44)
+                    .magnificPopupWrap_type.magnificPopupWrap_type--bus
+                        .magnificPopupWrap_type-title Autobus miejski
+                        .magnificPopupWrap_type-text Najłatwiej dotrzeć autobusem nr 175, który odjeżdża z przystanku przy terminalu przylotów. Należy wysiąść na przystanku Foksal i przejść 300 m w głąb ulicy o tej samej nazwie. Przejazd zabiera ok. 35 minut, choć w godzinach szczytu komunikacyjnego może trwać dłużej. Bilety można kupić w automatach na przystanku lub w autobusie.
+
+                    .magnificPopupWrap_subtitle Rekomendowany dojazd z Lotniska Warszawa-Modlin
+                    .magnificPopupWrap_type.magnificPopupWrap_type--car
+                        .magnificPopupWrap_type-title Taksówka
+                        .magnificPopupWrap_type-text Lotnisko Warszawa-Modlin położone jest ok. 40 km od centrum Warszawy, przy drodze ekspresowej nr 7. Poza godzinami szczytu przejazd zabiera taksówkarzom ok. 50 min. W godzinach porannych należy jednak uwzględnić występowanie korków – wówczas na dojazd warto zarezerwować nawet pół godziny więcej. Władze lotniska rekomendują usługi dwóch korporacji: Sawa Taxi (tel. 22 644.44.44) oraz Taxi Modlin (tel. +48 600.105.105). Koszt przejazdu to ok. 160 zł.
+
+
+                    .magnificPopupWrap_type.magnificPopupWrap_type--bus
+                        .magnificPopupWrap_type-title Autobus miejski
+                        .magnificPopupWrap_type-text Z Lotniska Warszawa-Modlin do centrum Warszawy kursują autobusy linii ModlinBus. Czas przejazdu to ok. 40 min, ale w godzinach porannych za sprawą korków może wydłużyć się nawet #[br]do 1 godz i 15 min. W Warszawie autobus zatrzymuje się pod Pałacem Kultury i Nauki, spod którego należy przejść podziemnym przejściem na drugą stronę ulicy Marszałkowskiej i między Domami Handlowymi Centrum wejść w ulicę Chmielną i dalej Foksal (dystans ok. 1 km). Bilety na ModlinBus należy rezerwować na stronie www.modlinbus.pl.
+
+                    .magnificPopupWrap_subtitle Rekomendowany dojazd z Dworca Centralnego
+                    .magnificPopupWrap_type.magnificPopupWrap_type--car
+                        .magnificPopupWrap_type-title Taksówka
+                        .magnificPopupWrap_type-text Przejazd taksówką z Dworca Centralnego do Villi Foksal zajmuje 10 minut i kosztuje ok. 20 zł. Postój taksówek znajduje się przy wyjściu z hali głównej od strony Alei Jerozolimskich.
+                    .magnificPopupWrap_type.magnificPopupWrap_type--bus
+                        .magnificPopupWrap_type-title Autobus miejski
+                        .magnificPopupWrap_type-text Najłatwiej dotrzeć autobusem nr 175, który odjeżdża z przystanku pod hotelem Mariott. Należy wysiąść na przystanku Foksal i przejść 300 m w głąb ulicy o tej samej nazwie. Przejazd zabiera ok. 12 minut, choć w godzinach szczytu komunikacyjnego może trwać dłużej. Bilety można kupić w automatach na przystanku lub w autobusie.
+
+                    .magnificPopupWrap_subtitle Informacja nt. dojazdu prywatnym samochodem
+                    .magnificPopupWrap_type.magnificPopupWrap_type--mycar
+                        .magnificPopupWrap_type-title Samochód
+                        .magnificPopupWrap_type-text Villa Foksal znajduje się w strefie płatnego parkowania, gdzie bardzo trudno o wolne miejsca postojowe. Dlatego nie rekomendujemy dojazdu prywatnym samochodem.
+        #mapa2.magnificPopupWrap
+            .magnificPopupWrap_buttons
+                .magnificPopupWrap_mapButton.is-active
+                .mfp.magnificPopupWrap_roadButton(data-mfp-src="#road2")
+            .magnificPopupWrap_map
+                | <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9779.005196986334!2d21.02462966836625!3d52.21156687975694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd1f7ca8f6cb%3A0xa5a766cc40fad684!2sRestauracja+Belvedere!5e0!3m2!1sru!2spl!4v1493808428457" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        #road2.magnificPopupWrap
+            .magnificPopupWrap_buttons
+                .magnificPopupWrap_mapButton.mfp(data-mfp-src="#mapa2")
+                .magnificPopupWrap_roadButton.is-active
+            .magnificPopupWrap_road
+                .magnificPopupWrap_title
+                    span Dojazd Restauracja Belvedere
+                    img(src="images/belvedereblack.png")
+                .magnificPopupWrap_text
+                    .magnificPopupWrap_subtitle Rekomendowany dojazd z Lotniska Fryderyka Chopina
+                    .magnificPopupWrap_type.magnificPopupWrap_type--car
+                        .magnificPopupWrap_type-title Taksówka
+                        .magnificPopupWrap_type-text Dojazd taksówką z Lotniska Fryderyka Chopina zabiera ok. 30 minut, choć w godzinach szczytu komunikacyjnego może trwać dłużej. Koszt to ok. 50-60 zł. Władze lotniska rekomendują usługi trzech korporacji: Ele Taxi (tel. +48 22.811.11.11), Super Taxi (tel. +48 22.196.22) oraz Sawa Taxi (tel. +48 22 644.44.44)
+                    .magnificPopupWrap_subtitle Rekomendowany dojazd z Lotniska Warszawa-Modlin
+                    .magnificPopupWrap_type.magnificPopupWrap_type--car
+                        .magnificPopupWrap_type-title Taksówka
+                        .magnificPopupWrap_type-text Lotnisko Warszawa-Modlin położone jest ok. 40 km od centrum Warszawy, przy drodze ekspresowej nr 7. Poza godzinami szczytu przejazd zabiera taksówkarzom ok. 50 min. W godzinach porannych należy jednak uwzględnić występowanie korków – wówczas na dojazd warto zarezerwować nawet pół godziny więcej. Władze lotniska rekomendują usługi dwóch korporacji taksówkowych: Sawa Taxi (tel. 22 644.44.44) oraz Taxi Modlin (tel. +48 600.105.105). Koszt przejazdu to ok. 160 zł.
+
+
+                    .magnificPopupWrap_type.magnificPopupWrap_type--bus
+                        .magnificPopupWrap_type-title Autobus miejski
+                        .magnificPopupWrap_type-text Z Lotniska Warszawa-Modlin do centrum Warszawy kursują autobusy linii ModlinBus. Czas przejazdu to ok. 40 min, ale w godzinach porannych za sprawą korków może wydłużyć się nawet #[br]do 1 godz i 15 min. W Warszawie autobus zatrzymuje się pod Pałacem Kultury i Nauki – stąd do Restauracji Belvedere rekomendujemy dojechać taksówką (koszt ok. 20-30 zł). Bilety na ModlinBus należy rezerwować na stronie www.modlinbus.pl.
+
+                    .magnificPopupWrap_subtitle Rekomendowany dojazd z Dworca Centralnego
+                    .magnificPopupWrap_type.magnificPopupWrap_type--car
+                        .magnificPopupWrap_type-title Taksówka
+                        .magnificPopupWrap_type-text Przejazd taksówką z Dworca Centralnego do Restauracji Belvedere zajmuje 20 minut i kosztuje ok. 30 zł. Postój taksówek znajduje się przy wyjściu z hali głównej od strony Alei Jerozolimskich.
+                    .magnificPopupWrap_type.magnificPopupWrap_type--bus
+                        .magnificPopupWrap_type-title Autobus miejski
+                        .magnificPopupWrap_type-text Najłatwiej dotrzeć autobusem nr 175, który odjeżdża z przystanku pod hotelem Mariott. Należy wysiąść na przystanku Foksal i przejść 300 m w głąb ulicy o tej samej nazwie. Przejazd zabiera ok. 12 minut, choć w godzinach szczytu komunikacyjnego może trwać dłużej. Bilety można kupić w automatach na przystanku lub w autobusie.
+
+                    .magnificPopupWrap_subtitle Informacja nt. dojazdu prywatnym samochodem
+                    .magnificPopupWrap_type.magnificPopupWrap_type--mycar
+                        .magnificPopupWrap_type-title Samochód
+                        .magnificPopupWrap_type-text Przed Restauracją Belvedere znajduje się duży parking do dyspozycji gości. Korzystanie z niego jest bezpłatne.

@@ -1,0 +1,13 @@
+-var _server = LOCALS.server
+mixin svgSprite()
+	if includeLocalStorage && includeSvgSprite
+		block svgSprite
+			script
+				include ../inlineFiles/sprite_svg.min.js
+			svg#sprite_wloczkij(xmlns="http://www.w3.org/2000/svg", style="height:0; width:0; visibility:hidden; position:absolute; top:0; left:0;", onload="wSpriteSvg.initialize(this,'jsons/svgsprite.json')")
+			= '\n'
+
+mixin svgSpritePreview()
+	if includeLocalStorage && includeSvgSprite
+		script
+			include ../inlineFiles/sprite_svg_preview.min.js

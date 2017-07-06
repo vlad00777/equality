@@ -1,0 +1,21 @@
+extends ../Templates/Base
+
+block Declaration
+    -fileAlias = 'partners'
+    -bodyAttr.class = ''
+    -seoSet = false
+    -mainMenuPath = ['PARTNERZY']
+
+block wMenu
+
+block wContainer
+    .mobile
+        .head_info
+            .head_info-textBlock
+                .head_info-text.head_info-text--small e-Quality Forum Warsaw 2017
+                .head_info-text 5-6 października 2017 r.
+    #fullpage
+        .container4.section
+            .container4_size
+                .container4_smallTitle Partnerzy
+                include ../Widgets/partners

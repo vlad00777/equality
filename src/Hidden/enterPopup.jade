@@ -1,0 +1,74 @@
+.enterRegPopup.zoomAnim
+   #enterReg
+      .enterReg_top
+         .popupBlock.enterBlock.wCur
+            .erTitle Вход на сайт
+            .popupContent
+               #entrForm.wForm.wFormDef.enterBlock_form.visForm(data-form='true', data-ajax='login', novalidate='novalidate')
+                  .wFormRow
+                     label.wLabel.-warn E-mail
+                     .wFormInput
+                        input.wInput(type='email', data-name='email', name='enter_email', data-msg-required='Это поле необходимо заполнить', data-msg-email='Пожалуйста, введите корректный Email', placeholder='E-mail', required='', aria-required='true')
+                  // .wFormRow
+                  .wFormRow
+                     label.wLabel.-warn Пароль
+                     input.wInput(type='password', data-name='password', name='enter_pass', data-msg-required='Это поле необходимо заполнить', data-msg-minlength='Пожалуйста, введите не меньше 4 символов', data-rule-minlength='4', placeholder='Пароль', required='', aria-required='true')
+                     .wFormInput
+                  // .wFormRow
+                  .wFormRow
+                     label.wLabel Запомнить данные
+                     label.wCheck
+                        input(data-name='remember', type='checkbox', checked='checked')
+                        ins
+                           span
+                  input(type='hidden', data-name='token', value='eODmSLASHOSLASHOSLASHOgzudmoC0Uyno7OOmi3ulQvs6n6T1y7+dt9B9P4GAuj8IXLgt9Dx6htvjjI6isL2o9d0S1N1jiwLdAQVJsxs7VYRZb50g0YJTM=')
+                  #forget_pass.passLink Забыли пароль?
+                  .tar
+                     button.wSubmit.button.button--red войти
+               #forgetForm.wForm.enterBlock_form(data-form='true', data-ajax='forgot_password', novalidate='novalidate')
+                  .wFormRow
+                     input.wInput(type='email', data-name='email', name='forget_email', data-msg-required='Это поле необходимо заполнить', data-msg-email='Пожалуйста, введите корректный Email', placeholder='E-mail', required='', aria-required='true')
+                  // .wFormRow
+                  .forgetInf
+                     | После отправления, в течении 5 минут к Вам на почту придут инструкции по восстановлению пароля.
+                  input(type='hidden', data-name='token', value='eODmSLASHOSLASHOSLASHOgzudmoC0Uyno7OOmi3ulQvs6n6T1y7+dt9B9P4GAuj8IXLgt9Dx6htvjjI6isL2o9d0S1N1jiwLdAQVJsxs7VYRZb50g0YJTM=')
+                  // .forgetInf
+                  #remember_pass.passLink Вернуться
+                  .tar
+                     button.wSubmit.button.button--red отправить
+         // .enterBlock
+         .popupBlock.wForm.regBlock(data-form='true', data-ajax='registration', novalidate='novalidate')
+            .erTitle Новый пользователь
+            .popupContent
+               .wFormRow
+                  label.wLabel.-warn E-mail
+                  .wFormInput
+                     input.wInput(type='email', data-name='email', name='reg_email', data-msg-required='Это поле необходимо заполнить', data-msg-email='Пожалуйста, введите корректный Email', placeholder='E-mail', required='', aria-required='true')
+               // .wFormRow
+               .wFormRow
+                  label.wLabel.-warn Пароль
+                  .wFormInput
+                     input.wInput(type='password', data-name='password', name='reg_pass', data-msg-required='Это поле необходимо заполнить', data-msg-minlength='Пожалуйста, введите не меньше 4 символов', data-rule-minlength='4', placeholder='Пароль', required='', aria-required='true')
+               // .wFormRow
+               .wFormRow
+                  label.wLabel Я согласен с условиями использования
+                  label.wCheck
+                     input(type='checkbox', data-name='agree', name='reg_agree', data-msg-required='Это поле нужно отметить', required='', aria-required='true')
+                     ins
+                        span
+               input(type='hidden', data-name='token', value='eODmSLASHOSLASHOSLASHOgzudmoC0Uyno7OOmi3ulQvs6n6T1y7+dt9B9P4GAuj8IXLgt9Dx6htvjjI6isL2o9d0S1N1jiwLdAQVJsxs7VYRZb50g0YJTM=')
+               // .checkBlock
+               .tar
+                  button.wSubmit.button.button--red зарегистрироваться
+            // .popupContent
+         // .regBlock
+      // .enterReg_top
+      .popupBlock.socEnter
+         .erTitle Вход через соц. сети
+         .popupContent.socLinkEnter
+            button.eVk(title='Вконтакте')
+            button.eFb(title='Facebook')
+         // .socLinkEnter
+         .clear
+      // .socEnter
+   button.mfp-close(title='Закрыть (ESC)', type='button') ×

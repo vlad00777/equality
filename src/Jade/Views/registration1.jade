@@ -1,0 +1,103 @@
+extends ../Templates/Base
+
+block Declaration
+    -fileAlias = 'index'
+    -bodyAttr.class = 'indexPage'
+    -seoSet = true
+    -mainMenuPath = ['Main']
+
+block wMenu
+
+block wContainer
+    #fullpage
+        .regFormBlock.section
+            .regFormBlock_size
+                .regFormBlock_title
+                    span.tlt Rejestracja
+                    .regFormBlock_title-right
+                        .regFormBlock_steps
+                            span Etap zamówienia:
+                            .regFormBlock_step.is-active 01
+                            .regFormBlock_step 02
+                            .regFormBlock_step 03
+                form.regFormBlock_form(action="", method="post")
+                    .regFormBlock_radios
+                        .regFormBlock_radio
+                            label(for="r1")
+                                input(type="radio",name="type",id="r1",checked)
+                                span e-Quality Forum Warsaw 2017
+                        .regFormBlock_radio
+                            label(for="r2")
+                                input(type="radio",name="type",id="r2")
+                                span Quality Forum Warsaw 2017 & Uroczysty Bankiet w Belvedere
+                    .regFormBlock_forms
+                        .regFormBlock_formBlock.js-animate
+                            .regFormBlock_formBlock-title Uzupełnij poniższe pola:
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label Imię i nazwisko:
+                                input(type="text",name="name",required)
+                            .regFormBlock_formBlock-row
+                                label Stanowisko:
+                                input(type="text",name="stan")
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label Nazwa firmy:
+                                input(type="text",name="firm",required)
+                            .regFormBlock_formBlock-row
+                                label Ulica:
+                                input(type="text",name="street")
+                            .regFormBlock_formBlock-row2
+                                .regFormBlock_formBlock-rowc2
+                                    label Kod pocztowy:
+                                    input(type="tel",name="code")
+                                .regFormBlock_formBlock-rowc2
+                                    label Miasto:
+                                    input(type="text",name="city")
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label Telefon:
+                                input(type="tel",name="tel",required)
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label E-mail:
+                                input(type="email",name="email",required)
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label Powtórz E-mail:
+                                input(type="email",name="cemail",required)
+                            .regFormBlock_formBlock-vat
+                                label
+                                    input(type="checkbox",name="vat").js-vat
+                                    span(data-text="nie chcę otrzymać fakturę VAT") chcę otrzymać fakturę VAT
+
+                        .regFormBlock_formBlock.regFormBlock_formBlock--disabled.js-vatForm.js-animate
+                            .regFormBlock_formBlock-title Podaj dane firmy:
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label Nazwa firmy:
+                                input(type="text")
+                            .regFormBlock_formBlock-row
+                                label Ulica:
+                                input(type="text")
+                            .regFormBlock_formBlock-row2
+                                .regFormBlock_formBlock-rowc2
+                                    label Kod pocztowy:
+                                    input(type="tel")
+                                .regFormBlock_formBlock-rowc2
+                                    label Miasto:
+                                    input(type="text")
+                            .regFormBlock_formBlock-row.regFormBlock_formBlock-row--required
+                                label NIP:
+                                input(type="tel")
+                        .regFormBlock_info
+                            .regFormBlock_inputs
+                                .regFormBlock_input.regFormBlock_input--required
+                                    label
+                                        input(type="checkbox",name="acc",required)
+                                        span Akceptuję warunki świadczenia usługi, klauzulę dot. przetwarzania danych osobowych dla celów realizacji usługi.
+                                .regFormBlock_input
+                                    label
+                                        input(type="checkbox",name="acc2")
+                                        span Akceptuję klauzulę dot. przetwarzania danych osobowych dla celów marketingowych.
+                            .regFormBlock_footer
+                                .regFormBlock_buttons
+                                    .buttons
+                                        input(type="submit")
+                                        .buttons_icon.buttons_icon--purple.buttons_icon--cart
+                                        .buttons_text płatność
+                                .regFormBlock_desc Pola oznaczone gwiazdką są obowiązkowe

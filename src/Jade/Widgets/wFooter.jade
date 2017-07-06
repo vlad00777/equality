@@ -1,0 +1,44 @@
+.footer
+    .footer_size
+        .footer_copyright
+            span projekt i realizacja:&nbsp;
+            a(href="http://ibif.pl", target="_blank") ibif.pl
+
+        .footer_adress e-Quality sp. z o. o., Skylight, ul. Złota 59, 00-120 Warszawa
+        .footer_mail
+            a(href="mailto:biuro@e-quality.eu") biuro@e-quality.eu
+
+    .mouse
+        .mouse_icon
+        span(data-bottom="DO GÓRY") POZIOM NIŻEJ
+
+
+#cookies-info
+    .wrap
+        div
+            p
+                | Serwis korzysta z plików cookies w celu realizacji usług zgodnie z &nbsp;
+                a(href='/polityka_cookies.pdf', target='_blank') polityką prywatności
+                | . Możesz określić warunki przechowywania lub dostępu do cookies w Twojej przeglądarce lub konfiguracji usługi.
+        span.close(title='Zamknij')
+
+mixin li(title,href,mclass)
+    li.mobileMenu__list__item(class!=mclass)
+        a(href=href)= title
+.mobileMenu
+    .js-close
+    .mobileMenu__inner
+        include wMobMenu
+        .mobileMenu__socials
+            .mobileMenu__social.mobileMenu__social-facebook
+                a(href="#",target="_blank",rel="nofollow")
+            .mobileMenu__social.mobileMenu__social-linkedin
+                a(href="#",target="_blank",rel="nofollow")
+        .mobileMenu__registration
+            a(href="registration.html") REJESTRACJA
+        .mobileMenu__lang
+            .head_lang
+                a(href="#").is-active PL
+                | /
+                a(href="#") EN
+.js-overlay

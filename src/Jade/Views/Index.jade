@@ -1,0 +1,78 @@
+extends ../Templates/Base
+
+block Declaration
+    -fileAlias = 'index'
+    -bodyAttr.class = ''
+    -seoSet = false
+    -mainMenuPath = ['HOME']
+
+block wMenu
+
+block wContainer
+    .mobile
+        .head_info
+            .head_info-textBlock
+                .head_info-text.head_info-text--small e-Quality Forum Warsaw 2017
+                .head_info-text 5-6 października 2017 r.
+    #fullpage
+        .container1.section
+            .container1_size
+                .container1_title.tlt e-Quality Forum
+                .container1_subTitle podejmuje temat szans i zagrożeń, które stoją przed cybergospodarką i e-państwem.
+                .container1_text To wyjątkowe miejsce spotkania najwybitniejszych programistów i cyberwizjonerów z menedżerami, przedsiębiorcami, inwestorami, politykami i liderami opinii. Pozwala wzajemnie dzielić się doświadczeniami #[br] i nawiązywać relacje biznesowe, czemu sprzyja butikowy charakter imprezy.
+                .container1_buttons
+                    a(href="idea.html").buttons
+                        .buttons_icon.buttons_icon--purple.buttons_icon--idea
+                        .buttons_text idea
+                    a(href="registration.html").buttons
+                        .buttons_icon.buttons_icon--green.buttons_icon--registration
+                        .buttons_text rejestracja
+
+        .container2.section
+            .container2_size
+                .container2_justify
+                    .container2_title
+                        span.tlt STARTUJEMY&nbsp;
+                        span.tlt 5-6 października&nbsp;
+                        span.tlt 2017 r.
+                    .container2_info
+                        .container2_boxes
+                            .container2_box.js-animate
+                                .container2_box-icon.container2_box-icon--true
+                                .container2_box-text Bez zawiłej terminologii #[br]i hermetycznego języka
+                            .container2_box.js-animate
+                                .container2_box-icon.container2_box-icon--settings
+                                .container2_box-text Otwarte na wszystkie branże gospodarki
+                            .container2_box.js-animate
+                                .container2_box-icon.container2_box-icon--team
+                                .container2_box-text Butikowy charakter, ograniczona liczba gości
+                        .container2_buttons
+                            a(href="registration.html").buttons
+                                .buttons_icon.buttons_icon--green.buttons_icon--registration
+                                .buttons_text rejestracja
+        .container3.section
+            .container3_size
+                ul.container3_list
+                    li.container3_item
+                        .container3_text Jak Twoja firma lub organizacja
+                        .container3_text--small poradzi sobie, gdy zostanie odcięta od internetu?
+                    li.container3_item
+                        .container3_text Jak na jej działalność wpłynie
+                        .container3_text--small nieodwracalna utrata danych elektronicznych?
+                    li.container3_item
+                        .container3_text Jakie poniesiesz straty,
+                        .container3_text--small gdy przestanie działać wewnętrzny system informatyczny?
+                    li.container3_item
+                        .container3_text A co, gdy cyfrowo
+                        .container3_text--small szpieguje Cię konkurencja?
+                .container3_buttons
+                    a(href="program.html").buttons
+                        .buttons_icon.buttons_icon--orange.buttons_icon--verify
+                        .buttons_text program
+                    a(href="registration.html").buttons
+                        .buttons_icon.buttons_icon--green.buttons_icon--registration
+                        .buttons_text rejestracja
+        .container4.section
+            .container4_size
+                .container4_title Współpraca
+                include ../Widgets/partners

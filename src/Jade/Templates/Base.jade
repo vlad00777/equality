@@ -1,0 +1,31 @@
+include ../System/Config
+
+include ../System/Mixins
+
+doctype html
+html.no-js(lang=fileLanguage dir="ltr")
+    head
+        include ../Widgets/Head
+
+    body&attributes(bodyAttr)
+        //- seoSet()
+        if seoSet
+            include ../Widgets/SeoText
+
+        block topBlock
+
+        .wrapper
+
+            block wHeader
+                include ../Widgets/wHeader
+
+            block wMenu
+                include ../Widgets/wMenu
+
+            .scontainer
+                block wContainer
+
+            block wFooter
+                include ../Widgets/wFooter
+
+        include ../Widgets/PageBottom

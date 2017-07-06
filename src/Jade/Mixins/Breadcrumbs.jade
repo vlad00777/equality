@@ -1,0 +1,35 @@
+﻿//- ++++++++++++++++++++++++++++++++++++++++
+	
+	Mixins/Breadcrumbs.jade
+	Хлебные крошки
+
+	Wezom wTPL v4.0.0
+
+//- ++++++++++++++++++++++++++++++++++++++++
+
+//- Создание элемента хлебных крошек
+	аргументы (элемент, флаг последнего элемента)
+mixin breadcrumbsElement(element, last)
+	-var markup
+	if last
+		//- если последний элемент вписываем только название для хлебных крошек
+		-markup = element.breadcrumbs
+	else
+		//- создаем ссылку
+		-markup = '<a href="'+element.link+'">'+element.breadcrumbs+'</a>'
+	//- набираем спан
+	| 
+	| <span>!{markup}</span>
+
+
+//- Создание списка хлебных крошек
+	аргументы (элемент списка, флаг последнего элемента)
+mixin breadcrumbs(element, last)
+	if element.parent
+		//- если у элемента есть предшествующий пункт - создаем его
+		+breadcrumbs(LOCALS.files[element.parent], false)
+		//- после создаем текущий элемент
+		+breadcrumbsElement(element, last)
+	else
+		//- доходим до корневого элемента
+		+breadcrumbsElement(element, false)

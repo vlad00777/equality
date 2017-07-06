@@ -1,0 +1,37 @@
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+block pageTitle
+    title= fileTitle
+meta(name="description" lang="pl-pl" content="e-Quality Forum podejmuje temat szans i zagrożeń, które stoją przed cybergospodarką i e-państwem.")
+= '\n'
+
+meta(name="theme-color",content="#fff")
+meta(name="msapplication-navbutton-color",content="#fff")
+meta(name="apple-mobile-web-app-status-bar-style",content="#fff")
+
+// Touch 
+meta(name="format-detection" content="telephone=no")
+meta(name="format-detection" content="address=no")
+= '\n'
+
+if locals.responsive
+    meta(name="HandheldFriendly" content="True")
+    meta(name="MobileOptimized" content="320")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1")
+else
+    meta(name="viewport" content="width=1000")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+= '\n'
+
+// saved from url=(0014)about:internet 
+='\n\t\t'
+<!--[if IE]><meta http-equiv="imagetoolbar" content="no"><![endif]-->
+='\n\t\t'
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+= '\n'
+
+
+block HeadExternalCss
+    include ExternalCss
