@@ -30,7 +30,7 @@
     "linkedin": "",
     "twitter": "",
     "www": "",
-    "sort":16
+    "sort":21
   },
   {
     "name": "Evenema",
@@ -219,5 +219,16 @@
       "twitter": "",
       "www": "",
       "sort":2.1
+  },
+  {
+      "name": "Widzialni",
+      "url": "widzialni",
+      "text": "",
+      "logo": "widzialni.png",
+      "facebook": "",
+      "linkedin": "",
+      "twitter": "",
+      "www": "http://widzialni.org",
+      "sort":16
   }
 ]
