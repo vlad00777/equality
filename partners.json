@@ -41,7 +41,7 @@
     "linkedin": "",
     "twitter": "",
     "www": "http://evenema.com",
-    "sort":9
+    "sort":21
   },
   {
     "name": "Polish Business Center",
@@ -219,5 +219,16 @@
       "twitter": "",
       "www": "",
       "sort":2.1
+  },
+  {
+      "name": "Widzialni",
+      "url": "widzialni",
+      "text": "<p>Fundacja Widzialni zajmuje się przeciwdziałaniem wykluczeniu cyfrowemu i społecznemu. Innymi słowy zajmujemy się tym, by ludzie ze specjalnymi potrzebami mogli sprawnie korzystać z Internetu. Problem ten dotyczy jednej piątej społeczeństwa – aż 23% ludności w Polsce to osoby z niepełnosprawnościami, a nie jest to jedyna grupa, która ma kłopot ze znajdowaniem i odtwarzaniem informacji na stronach. Musimy pamiętać również o osobach starszych, użytkownikach urządzeń mobilnych, nowych użytkownikach Internetu, obcokrajowcach czy osobach korzystających ze starego oprogramowania. Patrząc szerzej mówimy, aż o 80 mln spośród ludności UE osób z niepełnosprawnościami.</p>",
+      "logo": "widzialni.png",
+      "facebook": "",
+      "linkedin": "",
+      "twitter": "",
+      "www": "http://widzialni.org ",
+      "sort":9
   }
 ]
