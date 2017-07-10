@@ -393,6 +393,12 @@ img{
 				font-size: get-vw(30px);
 			}
 		}
+		&--edit{
+			@include icon(edit);
+			&:before{
+				font-size: get-vw(30px);
+			}
+		}
 		&:before{
 			color: #fff;
 			line-height:get-vw(80px);
@@ -2508,6 +2514,14 @@ img{
 				background: none;
 				border:none;
 				font-size: 0;
+			}
+		}
+		&--rows{
+			> a{
+				margin-bottom:get-vw(20px);
+				&:last-child{
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
